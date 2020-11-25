@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Krossing.</title>
+    <link rel="stylesheet" href="scss.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script>
+      window.console = window.console || function (t) {};
+    </script>
+
+    <script>
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="nav">
+        <div class="logo">
+          <h4>Krossing.</h4>
+        </div>
+        <div class="links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="#" class="mainlink">Contact</a>
+        </div>
+      </div>
+      <!--TESTIMONIAL-->
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        style="text-align: center; margin-top: 10%"
+      >
+        <h1>
+          Clients.<span style="color: #e0501b; font-size: 3vw">
+            Testimonial.</span
+          >
+        </h1>
+      </div>
+      <br />
+      <div class="testimonials-container">
+        <div class="progress-bar"></div>
+        <div class="fa fa-quote-right fa-quote"></div>
+        <div class="fa fa-quote-left fa-quote"></div>
+        <p class="testimonial">
+          I've worked with literally hundreds of HTML/CSS developers and I have
+          to say the top spot goes to this guy. This guy is an amazing
+          developer. He stresses on good, clean code and pays heed to the
+          details. I love developers who respect each and every aspect of a
+          throughly thought out design and do their best to put it in code. He
+          goes over and beyond and transforms ART into PIXELS - without a
+          glitch, every time.
+        </p>
+        <div class="centered-items">
+          <img
+            class="logo"
+            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c33066bf8808c934c8ab394dff6"
+            alt="logo"
+          />
+          <div class="user-details">
+            <h4 class="username">Miyah Myles</h4>
+            <p class="role">Marketing</p>
+          </div>
+        </div>
+      </div>
+      <!--/TESTIMONIAL-->
+      <!--FORM-->
+      <div class="contact-header" data-aos="fade-up" data-aos-duration="1000">
+        <h1>
+          Contact.<span style="color: #e0501b; font-size: 4vw"> Us.</span>
+        </h1>
+      </div>
+      <div
+        class="box"
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="1000"
+      >
+        <div class="header">
+          <i class="fa fa-paper-plane" aria-hidden="true"></i>
+          <p class="hidden" data-aos="fade-right" data-aos-duration="10000">
+            Thanks!
+          </p>
+        </div>
+        <div class="form">
+          <form data-netlify="true">
+            <input
+              type="text"
+              placeholder="Fullname"
+              class="field"
+              autocomplete="off"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Your Email"
+              class="field"
+              autocomplete="off"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              class="field"
+              required
+            ></textarea>
+            <!--<input type="button" value="Send" class="button" />-->
+            <button class="sub-btn w3-ripple">Send</button>
+          </form>
+        </div>
+      </div>
+      <!--/FORM-->
+
+      <!--FOOTER-->
+      <div class="footer" style="margin-top: 5%">
+        <h2>Krossing.</h2>
+        <div class="footerlinks">
+          <a
+            href="https://www.instagram.com/atharva20_coder/"
+            class="fa fa-instagram"
+          ></a>
+          <a href="https://twitter.com/ceo_joshi" class="fa fa-twitter"></a>
+          <a
+            href="https://www.linkedin.com/in/atharva-joshi-2520/"
+            class="fa fa-linkedin"
+          ></a>
+          <a href="https://github.com/atharva20-coder" class="fa fa-github"></a>
+          <a
+            href="https://www.reddit.com/user/atharva20-coder/"
+            class="fa fa-reddit"
+          ></a>
+        </div>
+        <div class="border-top text-center border-dark py-5">
+          <p class="mb-0 text-light">
+            Copyright ©
+            <script>
+              var CurrentYear = new Date().getFullYear();
+              document.write(CurrentYear);
+            </script>
+            made by <a href="about.html" class="copy-link">Atharva Joshi</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!--FORM VALIDATION-->
+    <script id="rendered-js">
+      var button = document.querySelector(".sub-btn");
+      var field = document.querySelector(".field");
+      var icon = document.querySelector(".header i");
+      var text = document.querySelector(".header p");
+
+      button.addEventListener("click", function () {
+        if (field.value === "") {
+          field.placeholder = "You must enter your email";
+          // alert('You must enter an email');
+        } else {
+          icon.classList.toggle("animation");
+          text.classList.toggle("show");
+        }
+      });
+    </script>
+  </body>
+</html>
